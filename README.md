@@ -22,14 +22,20 @@ Receiving fee allocations does not confer administrator authority. The 10% SUI p
 
 ## Project layout
 
-- `move/`: Move 2024 package, contract source and scenario tests.
+- `move/`: Move 2024 package, five contract modules and 56 authored scenario/unit tests.
 - `model/`: independent Python accounting/state model and regression checks.
 - `scripts/`: checksum-verifying toolchain installer and validation/evidence collection.
 - `validation_tests/`: tests of the validation tooling, including synthetic evidence cases.
 - `probes/`: external-package positive control and expected compiler rejections.
 - `.github/workflows/`: validation only; no wallet credentials or deployment steps.
 
-The source import and GitHub validation setup are being added to this repository. Build status must be read from the Actions run for the specific commit; preparation or older Windows results are not a pass for a new revision.
+## Automated validation
+
+The workflow runs on pushes, pull requests, and manual requests. Inspect the Actions run for the exact commit: https://github.com/TheCryptoArborist/treepotluck/actions
+
+It runs Python checks, installs the checksum-pinned Sui compiler, builds the Move package, executes all authored Move tests, and checks that four deliberately invalid external packages are rejected for the intended reasons. Each run preserves its own evidence artifact, including failures. See `docs/REMOTE_VALIDATION.md`.
+
+**A CI pass is not launch approval or a security audit.** The earlier 51-test Windows checkpoint does not certify this newer 56-test wallet-routing revision; actual results must come from its own run. The example settings retain conservative not-ready flags rather than rewriting themselves on a passing test run.
 
 ## Local checkout
 
@@ -39,10 +45,10 @@ Requested Windows location: `D:\Finance\Crypto\Repos\treepotluck`.
 git clone https://github.com/TheCryptoArborist/treepotluck.git "D:\Finance\Crypto\Repos\treepotluck"
 ```
 
-A Windows checkout is separate from the hosted GitHub repository. Cloning does not deploy the game or spend SUI.
+A Windows checkout is separate from the hosted GitHub repository. This import does not create a directory on the user's computer. Cloning does not deploy the game or spend SUI.
 
 ## Release gates
 
-Do not enable live entries until the current revision passes compilation and the complete test suite, the burn-purchase mechanism and reserve policy are implemented and approved, adversarial transaction tests are complete, and independent security review and deployment/source verification are complete. Local or CI validation is not a security audit or launch approval.
+Do not enable live entries until every item in `docs/RELEASE_GATES.md` is satisfied. The burn budget and reserve currently have no spending endpoints.
 
-Before technical changes, consult the current README and applicable skill files at `https://github.com/MystenLabs/skills` rather than relying on a saved snapshot.
+Before technical changes, consult the current README and applicable skill files at `https://github.com/MystenLabs/skills` rather than relying on a saved snapshot. See `docs/SOURCES.md` for this import's references.

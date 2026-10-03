@@ -1,0 +1,5 @@
+[package]
+name = "tree_pot"
+edition = "2024"
+
+# This selects dependency resolution only. Build/test do not publish or spend SUI.

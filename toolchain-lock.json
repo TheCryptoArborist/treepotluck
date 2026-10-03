@@ -1,0 +1,15 @@
+{
+  "tag": "mainnet-v1.80.1",
+  "version": "1.80.1",
+  "commit": "782577ca40c9ef0b3f400ade8bc2cc2dcd0e2b23",
+  "metadata_checked_utc": "2026-10-03",
+  "source": "https://api.github.com/repos/MystenLabs/sui/releases/tags/mainnet-v1.80.1",
+  "notes": "Pinned published mainnet release, not a promise that this is the latest release on a future run. Hashes are release-asset SHA256 values; no compiler executable was obtained in the authoring environment.",
+  "assets": {
+    "Linux-x86_64": {"name": "sui-mainnet-v1.80.1-ubuntu-x86_64.tgz", "size": 1110801319, "sha256": "97f9aed10e0c2fe3204ce4639ac992e1449b17c14f22f30e9f903ead54ac7336"},
+    "Linux-aarch64": {"name": "sui-mainnet-v1.80.1-ubuntu-aarch64.tgz", "size": 1064352654, "sha256": "d257b82dbc7f84f84fa95f1aaae413b72813ffe728ccb5c1012e714929262f20"},
+    "Windows-x86_64": {"name": "sui-mainnet-v1.80.1-windows-x86_64.tgz", "size": 275486470, "sha256": "02b11427ea06d62e3445abab21fd1d29c139272f490e3aa3f7afd4b02fca0840"},
+    "Darwin-aarch64": {"name": "sui-mainnet-v1.80.1-macos-arm64.tgz", "size": 384320856, "sha256": "4df39def26921abbffbc78902e7bd8a89fc8c99c99eb0c4fb254ebbcbf963c05"},
+    "Darwin-x86_64": {"name": "sui-mainnet-v1.80.1-macos-x86_64.tgz", "size": 384817026, "sha256": "ef79245ea947acd508024251849e8faca89b1b4e63ba44ba2a01895b45e7433f"}
+  }
+}

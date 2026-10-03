@@ -1,0 +1,4 @@
+# Keep source fingerprints consistent across Windows and GitHub-hosted Linux.
+* text=auto eol=lf
+*.mv binary
+*.zip binary

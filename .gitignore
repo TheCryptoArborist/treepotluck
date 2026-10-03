@@ -1,0 +1,17 @@
+.tools/
+__pycache__/
+*.pyc
+move/build/
+move/.coverage*
+move/.trace*
+ci-artifacts/
+evidence/validation-runs/
+backups/
+.env
+.env.*
+!.env.example
+*.keystore
+sui.keystore
+client.yaml
+.DS_Store
+Thumbs.db
